@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+        <label for="nameLast">Name:</label>
+         <input type="text" id="name" name="nameLast" />
+        <button onclick="display()" >submit</button>
+        <h4 id="x"></h4>
+ 
+
+    <script>
+        function display(){
+            let name = document.getElementById("name");//name=  <input type="text" id="name" name="nameLast" />
+            let result =name.value;
+            console.log(result);
+            document.getElementById("x").innerHTML=result;
+
+        }
+    </script>
+</body>
+</html>

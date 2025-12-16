@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <h1>This is created using HTML</h1>
+        
+    </div>
+
+    <img id="bulb" alt="bulb" />
+
+    <script>
+        let h1 = document.createElement("h1");
+        h1.innerHTML = "This is created using DOM";
+        h1.style.border = "2px solid red";
+        document.getElementById("root").appendChild(h1);
+
+        let img = document.getElementById("bulb");
+        // img.remove();
+        img.setAttribute("src","https://www.w3schools.com/js/pic_bulbon.gif");
+
+        console.log(img.getAttribute("alt"));
+
+        img.removeAttribute("alt");
+    </script>
+</body>
+<!--
+     src="https://www.w3schools.com/js/pic_bulbon.gif"
+-->
+</html>

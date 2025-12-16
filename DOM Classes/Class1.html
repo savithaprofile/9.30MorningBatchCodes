@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #four{
+            font-size: 100px;
+        }
+    </style>
+
+</head>
+<body>
+   <h4 id="four"> im fourth</h4>
+
+   <h4  class="six"> im fifth</h4>
+   <h4  class="six"> im sixth</h4>
+   <h4 id="four"> im seventh</h4>
+
+   <script>
+    // document.getElementById("four").style.color = "red";
+    // document.getElementById("four").innerHTML = "im changed";
+
+    // document.getElementsByTagName("h4")[3].style.color = "green";
+
+    // for(let i = 0; i < document.getElementsByTagName("h4").length; i++){
+    //     document.getElementsByTagName("h4")[i].style.color = "red";
+    // }
+
+    // var headings =document.getElementsByTagName("h4");//
+    // headings[0].style.color = "red";
+
+    // var arrlength = headings.length;
+
+    // for(let i=0; i<4;i++){
+    //     headings[i].style.color = "green";
+    // }
+
+    // var elementRes = document.getElementsByClassName("six");
+    // elementRes[0].style.color = "blue";
+
+    // var result = document.querySelector("h4");
+    // gets only the first resulting element, can be used with id, class, tagname
+
+    // var result = document.querySelectorAll("h4");
+    // gets all the resulting elements, can be used with id, class, tagname
+    // result[0].style.color = "blue";
+    // console.log(result);
+    const head = document.querySelectorAll('h4'); 
+for (let i = 0; i < head.length; i++) {
+    head[i].style.fontSize = '100px';
+}
+   </script>
+</body>
+</html>
+<!-- getElementById, getElementsByClassName, getElementsByTagName,
+  querySelector,    querySelectorAll-->

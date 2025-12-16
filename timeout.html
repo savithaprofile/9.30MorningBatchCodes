@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Hello</h1>
+    <p id="para"></p>
+    <script>
+        var heading = document.getElementById("heading");
+        function changeText() {
+            heading.innerHTML = "Hello, World!";
+        }
+        setTimeout(changeText, 3000);
+
+        var para = document.getElementById("para");
+        function showMessage() {
+            para.innerHTML += "This message is shown after 5 seconds.";
+        }
+        var inter = setInterval(showMessage, 2000);
+        function stopInterval() {
+            clearInterval(inter);
+        }
+
+        setTimeout(stopInterval, 7000)// Stops the interval immediately
+       
+    </script>
+</body>
+</html>
