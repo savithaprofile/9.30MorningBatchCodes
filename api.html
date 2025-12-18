@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <div>
-        <h1>API</h1>
 
-        <h2 id="advice">Space for advice</h2>
-    </div>
+<body>
+    <h1 id="heading"></h1>
+    <h1 id="id"></h1>
+
+    <script>
+        var heading = document.getElementById("heading");
+        var id1 = document.getElementById("id");
+
+        fetch("https://api.adviceslip.com/advice")
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                console.log("Advice:", data.slip.advice);
+                heading.innerHTML = data.slip.advice;
+                id1.innerHTML = data.slip.id;
+            });
+    </script>
+
 </body>
+
 </html>
