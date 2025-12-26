@@ -37,3 +37,14 @@ fetch("https://sv443.net/jokeapi/v2/joke/Any")
 
 
 
+
+
+
+
+fetch(url)
+.then((res)=>{return res.json();})
+.then((data)=>{console.log(data);})
+.catch()
+.finally();
+
+
