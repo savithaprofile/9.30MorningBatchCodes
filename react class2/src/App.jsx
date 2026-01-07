@@ -1,16 +1,18 @@
 import React from 'react'
 import Demo from './Demo.jsx'
 import "./App.css"
+import Hel from "./Hello.jsx"
 
 const App = () => {
   return (
     <div className="holder">
+        <Hel name="Savitha"/>
+
       App
-    <h1 className='bg-primary'>heloo</h1>
-      <Demo name="Jeyalakshmi" gender="female"/>
-      <Demo name="Samiksha" phone="224326" />
-    <h1> Im inbetween</h1>
-      <Demo name="Rubini"/>
+      <Hel name="Jeyalakshmi"/>
+    
+    
+      
     </div>
   )
 }
