@@ -1,11 +1,17 @@
 import React from 'react'
+
 import Navbar from '../components/common/Navbar'
 
-const Home = () => {
+const Home = ({ count, setCount }) => {
+
   return (
     <div>
        <Navbar/>
- Home page</div>
+       <h1>Home page</h1>
+       <p>Current count: {count}</p>
+       <button onClick={() => setCount(count + 1)}>Increment</button>
+       <button onClick={() => setCount(count - 1)}>Decrement</button>
+     </div>
   )
 }
 

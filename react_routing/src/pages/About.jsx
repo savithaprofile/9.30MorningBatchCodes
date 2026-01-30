@@ -1,11 +1,13 @@
 import React from 'react'
 import Navbar from '../components/common/Navbar'
 
-const About = () => {
+const About = ({count}) => {
   return (
     <div>
         <Navbar/>
-        About</div>
+        About
+        Count is {count}
+        </div>
   )
 }
 
