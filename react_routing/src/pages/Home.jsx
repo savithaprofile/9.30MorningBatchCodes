@@ -1,10 +1,12 @@
 import React from 'react'
+import { useState } from 'react';
 
 import Navbar from '../components/common/Navbar'
 
-const Home = ({ count, setCount }) => {
-
+const Home = ({count, setCount}) => {
+   
   return (
+ 
     <div>
        <Navbar/>
        <h1>Home page</h1>
@@ -15,4 +17,4 @@ const Home = ({ count, setCount }) => {
   )
 }
 
-export default Home
+export default Homex

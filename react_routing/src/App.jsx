@@ -12,9 +12,8 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home count={count} setCount={setCount} />} />
-        <Route path="/contact" element={<ContactPage setCount={setCount} count={count}/>} />
-        <Route path="/about" element={<About count={count}/>} />
-
+        <Route path="/contact" element={<ContactPage count={count} setCount={setCount} />} />
+        <Route path="/about" element={<About count={count} setCount={setCount} />} />
       </Routes>
     
     </BrowserRouter>

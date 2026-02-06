@@ -1,13 +1,17 @@
 import React from 'react'
 import Navbar from '../components/common/Navbar'
+import { useState } from 'react';
 
-const ContactPage = ({ setCount ,count}) => {
+const ContactPage = ({count, setCount}) => {
+
   return (
+ 
     <div>
         <Navbar/>
-        ContactPage
-         <button onClick={() => setCount(count + 1)}>Increment</button>
-       <button onClick={() => setCount(count - 1)}>Decrement</button>
+        Cart page:
+        count is {count}
+         {/* <button onClick={() => setCount(count + 1)}>Increment</button>
+       <button onClick={() => setCount(count - 1)}>Decrement</button> */}
         </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/common/Navbar'
 
-const About = ({count}) => {
+const About = ({count,setCount}) => {
   return (
     <div>
         <Navbar/>
