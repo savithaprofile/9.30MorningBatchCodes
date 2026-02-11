@@ -17,4 +17,4 @@ const Home = ({count, setCount}) => {
   )
 }
 
-export default Homex
+export default Home;

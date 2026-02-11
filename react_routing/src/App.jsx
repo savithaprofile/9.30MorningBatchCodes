@@ -23,6 +23,8 @@ const App = () => {
     //   <About/>
     //   <ContactPage/>
     // </div>
+
+    // npm i react-router-dom
   )
 }
 
