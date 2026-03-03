@@ -25,6 +25,7 @@ const Product = () => {
       "rate": 3.9,
       "count": 120
     }
+    
   },
   {
     "id": 2,
@@ -254,11 +255,28 @@ const Product = () => {
       "count": 145
     }
   }
+
+
 ]
 
 const addToCart = (product) => {
-  setCart([...cart, product]);
-}
+
+  const existing =  cart.find(item=> item.id===product.id);
+  if(!existing){
+    setCart([...cart, {...product,qty:1}]);
+  }
+  else{
+    const newCart = cart.map((prod)=>{
+      if(prod.id==existing.id){
+        return {...prod, qty:prod.qty+1}
+      }
+      else 
+        return prod;
+      })
+      setCart(newCart);
+    
+  }
+  }
 
   return (
 
@@ -297,6 +315,7 @@ const addToCart = (product) => {
           <p>{item.description.slice(0, 100)}...</p>
           <p>${item.price}</p>
           <p> Rating: {item.rating.rate}</p>
+          <p> Qty: {item.qty}</p>
           </div>
         </div>
       ))}
