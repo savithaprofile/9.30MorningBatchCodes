@@ -12,6 +12,7 @@ const Product = () => {
   // }, [])
 
   const [cart, setCart] = useState([]);
+
  
   const products = [
   {
