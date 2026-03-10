@@ -39,6 +39,7 @@ const Products = ()=>{
       "rate": 4.7,
       "count": 500
     }
+    
   },
 ]
 
@@ -48,12 +49,22 @@ const addToCart = (product)=>{
   const isPresent = cart.find((item)=>{
     return item.id===product.id
   })
-  if(isPresent){
-    alert("Product is already in cart")
-    return;
-  }
+  if(isPresent)
+    {
+   const updatedCart = cart.map((item)=>{
+    if(item.id===product.id){
+      return {...item, qty: item.qty+1}
+    }
+    else{
+      return item;
+    }
 
-  setCart([...cart,product])
+  })
+  setCart(updatedCart)
+  }
+  else{
+     setCart([...cart,{...product, qty:1}])
+  }
 }
 
 return (
@@ -69,7 +80,7 @@ return (
                 <img src={product.image}/>
                 <h2>{product.price}</h2>
                 <button onClick={()=>addToCart(product)}>Add to Cart</button>
-                <button > Dummy</button>
+               
               </div>
 
             )
@@ -85,6 +96,7 @@ return (
                   <h1>{item.title}</h1>
                   <img src={item.image}/>
                   <h2>{item.price}</h2>
+                  <h2>Qty: {item.qty}</h2>
                 </div>
               ) 
             })

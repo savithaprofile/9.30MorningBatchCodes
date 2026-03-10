@@ -1,5 +1,12 @@
 const colors =["red", "green","blue"]
-console.log(colors)
+
+const foundItem = colors.find((x)=>{
+    return x==="gray"
+})
+
+console.log(foundItem)
+
+// console.log(colors)
 
 
 
@@ -8,6 +15,14 @@ const prod=[
 ]
 
 const box =prod.find((x)=>{
-    return x.id===4
+    return x.id===2
 })
 console.log(box)
+
+var x;
+console.log(x)
+//spread operator
+
+var a = [1,2,3]
+
+a= [...a,4,5,6]
