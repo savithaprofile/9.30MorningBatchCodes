@@ -1,29 +1,10 @@
 import React, { use } from 'react'
+import {useContext} from 'react';
+import {CartContext} from '../context/cartContext'
 
+const Products = ()=>{
 
-const Products = ({products, cart, setCart})=>{
-
-const addToCart = (product)=>{
-  const isPresent = cart.find((item)=>{
-    return item.id===product.id
-  })
-  if(isPresent)
-    {
-   const updatedCart = cart.map((item)=>{
-    if(item.id===product.id){
-      return {...item, qty: item.qty+1}
-    }
-    else{
-      return item;
-    }
-
-  })
-  setCart(updatedCart)
-  }
-  else{
-     setCart([...cart,{...product, qty:1}])
-  }
-}
+const {products,cart,addToCart} = useContext(CartContext)
 
 return (
     <div >    
