@@ -3,7 +3,7 @@ import React from 'react'
 const Home = ({products, cart, setCart}) => {
   return (
     <div>
-      {products.slice(0, 2).map((product)=>{
+      {products.map((product)=>{
         return(
           <div key={product.id} style={{border:"2px solid black",display:"inline-block", margin:"10px", width:"500px", overflow:"hidden"}}>
             
