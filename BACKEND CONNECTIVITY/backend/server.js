@@ -1,9 +1,10 @@
 const express =require('express');
+const cors = require('cors');
 
 
 const app = express();
 app.use(express.json());
-
+app.use(cors());
 
 
 app.get('/',(req, res)=>{
@@ -16,7 +17,7 @@ app.get('/about',(req, res)=>{
 
 app.get('/products',(req,res)=>{
 
-    const products = {
+    const products = [{
   "id": 1,
   "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
   "price": 109.95,
@@ -27,13 +28,23 @@ app.get('/products',(req,res)=>{
     "rate": 3.9,
     "count": 120
   }
-}
+}]
  res.json(products)
 })
 
-app.get('/name/:fname',(req,res)=>{
-    const {fname} = req.params;
-    res.json({message: `Hello ${fname}`})
+app.post('/send-name',(req, res)=>{
+    const {name,password} = req.body;
+
+    if(name==="Shamiksha" && password === "12345"){
+        return res.json({message: "ok"})
+    }
+    if (name==="Rubini" && password === "54321"){
+        return res.json({message: "ok"})
+    }
+    res.json({message: `Sorry, I don't know you`})
 })
 
-app.listen(4000);
+
+app.listen(4000, ()=>{
+  console.log("Server is running on port 4000");
+});
